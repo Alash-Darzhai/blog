@@ -1,0 +1,75 @@
+@import '../../assets/style.variable.scss';
+
+.ArticleInfo {
+  margin-top: 26px;
+  background-color: $background_white;
+  max-width: 938px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-shadow: $shadow;
+  justify-content: space-between;
+  &__info {
+    margin: 15px 65px 24px 16px;
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &__title {
+    color: $blue;
+    font-family: $font-family-bold;
+    font-size: large;
+    margin-right: 13px;
+  }
+  &__likesAmount {
+    font-family: $font-family;
+    font-size: small;
+    margin-left: 5px;
+  }
+  &__tags {
+    display: flex;
+    list-style: none;
+    margin-bottom: 5px;
+  }
+  &__tagItem {
+    padding: 2px 5px 3px 5px;
+    border: 1px solid $offer;
+    margin-right: 8px;
+    font-size: small;
+    border-radius: 3px;
+  }
+  &__tagItem:hover {
+    background-color: $background;
+    cursor: pointer;
+  }
+  &__text {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__account {
+    display: flex;
+    margin: 15px 15px 0 0;
+  }
+  &__accountTextInfo {
+    margin-right: 12px;
+  }
+  &__date {
+    font-size: 12px;
+    white-space: nowrap;
+    color: #00000080;
+    text-align: right;
+  }
+  &__autorsLogin {
+    font-family: $font-family-bold;
+    white-space: nowrap;
+  }
+  &__image {
+    align-self: flex-start;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+  }
+}

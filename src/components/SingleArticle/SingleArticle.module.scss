@@ -1,0 +1,124 @@
+@import '../../assets/style.variable.scss';
+
+.SingleArticle {
+  width: 90%;
+  max-width: 870px;
+  margin-top: 25px;
+  background-color: $background_white;
+  padding: 15px 15px 33px 15px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  &__info {
+    margin: 0 240px 24px 0;
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $blue;
+    font-family: $font-family-bold;
+    font-size: large;
+    margin-right: 13px;
+  }
+  &__likesAmount {
+    font-family: $font-family;
+    font-size: small;
+    margin-left: 5px;
+  }
+  &__tags {
+    display: flex;
+    list-style: none;
+    margin-bottom: 5px;
+  }
+  &__tagItem {
+    padding: 2px 5px 3px 5px;
+    border: 1px solid $offer;
+    margin-right: 8px;
+    font-size: small;
+    border-radius: 3px;
+  }
+  &__tagItem:hover {
+    background-color: $background;
+    cursor: pointer;
+  }
+  &__description {
+    font-size: 12px;
+    font-family: $font-family;
+    max-width: 75%;
+    line-height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    margin-bottom: 25px;
+  }
+  &__account {
+    display: flex;
+  }
+  &__accountTextInfo {
+    margin-right: 12px;
+  }
+  &__date {
+    font-size: 12px;
+    white-space: nowrap;
+    color: #00000080;
+    text-align: right;
+  }
+  &__autorsLogin {
+    font-family: $font-family-bold;
+    white-space: nowrap;
+  }
+  &__image {
+    align-self: flex-start;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+  }
+  &__buttons {
+    margin-top: 30px;
+    display: flex;
+  }
+  &__deleteButton {
+    color: #f5222d;
+    width: 78px;
+    height: 30px;
+    font-style: 14px;
+    padding: 5px 17px;
+    border: 1px #f5222d solid;
+    border-radius: 5px;
+    margin-right: 12px;
+  }
+  &__editButton {
+    color: #52c41a;
+    width: 78px;
+    height: 30px;
+    font-style: 14px;
+    padding: 5px 17px;
+    border: 1px #52c41a solid;
+    border-radius: 5px;
+  }
+  &__deleteMessage {
+    text-align: center;
+    width: 938px;
+    margin: auto;
+    margin-top: 20px;
+    color: #52c41a;
+  }
+  &__spin {
+    margin: 20px auto;
+    width: 100%;
+    align-self: center;
+  }
+  &__error {
+    text-align: center;
+    width: 938px;
+    margin: auto;
+    margin-top: 20px;
+    color: #f5222d;
+  }
+}

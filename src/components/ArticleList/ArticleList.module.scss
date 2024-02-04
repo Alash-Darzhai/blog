@@ -1,0 +1,19 @@
+.ArticleList {
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  &__error {
+    text-align: center;
+    width: 938px;
+    margin: auto;
+    margin-top: 20px;
+    color: #f5222d;
+  }
+}

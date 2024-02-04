@@ -1,0 +1,91 @@
+@import '../../../assets/style.variable.scss';
+
+.SignUp {
+  margin-top: 60px;
+  max-width: 938px;
+  background-color: $background_white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 385px;
+  display: flex;
+  box-shadow: $shadow;
+  justify-content: space-between;
+  font-family: $font-family;
+  &__wrapper {
+    margin: 48px 32px;
+  }
+  &__caption {
+    font-family: $font-family-bold;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+  }
+  &__form {
+    padding-top: 20px;
+  }
+  &__container {
+    padding-bottom: 12px;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: $font-family-bold;
+  }
+  &__input {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    font-family: $font-family;
+    font-size: 15px;
+    padding: 12px;
+  }
+  &__input::placeholder {
+    color: #bfbfbf;
+  }
+  &__agreement {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 21px;
+  }
+  &__checkbox {
+    margin-top: 2px;
+    margin-right: 8px;
+    height: 16px;
+    width: 22px;
+  }
+  &__agreementText {
+    font-size: 14px;
+    display: block;
+  }
+  &__button {
+    height: 40px;
+    width: 320px;
+    background-color: $blue;
+    border-radius: 5px;
+  }
+  &__buttonText {
+    color: white;
+    font-size: 16px;
+  }
+  &__footer {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  &__footerLink {
+    color: $blue;
+  }
+  &__errorText {
+    color: #f5222d;
+    font-size: 12px;
+  }
+  &__linkText {
+    color: $blue;
+  }
+  &__linkText:hover {
+    text-decoration: underline;
+  }
+}

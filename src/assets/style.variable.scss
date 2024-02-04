@@ -1,0 +1,25 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url(../assets/fonts/Inter-SemiBold.ttf);
+}
+
+$font-family: OpenSans, Arial, Helvetica, sans-serif;
+$font-family-bold: OpenSansSemiBold;
+
+$offer: rgba(0, 0, 0, 0.85);
+$text: rgba(0, 0, 0, 0.75);
+
+$blue: rgba(24, 144, 255, 1);
+$gray: rgba(0, 0, 0, 0.5);
+
+$green: rgba(82, 196, 26, 1);
+
+$background: rgba(235, 238, 243, 1);
+$background_white: #fff;
+
+$shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);

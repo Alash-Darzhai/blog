@@ -30,9 +30,16 @@
   "plugins": ["react", "babel", "jsx-a11y", "prettier", "import", "react-hooks"],
   "rules": {
     "react/state-in-constructor": 0,
+    "no-console": "off",
+    "default-param-last": 0,
     "jsx-a11y/label-has-associated-control": 0,
     "indent": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "linebreak-style": [0, "unix"],
     "react/prop-types": 0,
     "semi": "off",
@@ -61,7 +68,8 @@
         "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
-    ]
+    ],
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "import/resolver": {
