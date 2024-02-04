@@ -1,3 +1,3 @@
 # Blog
 
-project [Aviasales](https://blog-murex-nine.vercel.app//)
+project [Blog](https://blog-murex-nine.vercel.app//)
