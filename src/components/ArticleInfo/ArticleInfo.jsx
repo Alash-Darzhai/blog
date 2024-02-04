@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, no-unneeded-ternary, react/no-array-index-key */
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -8,6 +9,7 @@ import coloredLikeButton from '../../assets/img/LikeButtonColored.svg'
 import { fetchLikePost } from '../../services/fetchLikePost'
 
 import classes from './ArticleInfo.module.scss'
+
 const ArticleInfo = ({ data }) => {
   const dispatch = useDispatch()
 
