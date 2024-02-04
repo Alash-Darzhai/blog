@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -8,14 +8,8 @@ import { registerUser } from '../../../services/registerUser'
 import classes from './SignUp.module.scss'
 
 const SignUp = () => {
-  const alreadyUsedEmail = useSelector((state) => {
-    return state.formReducer.alreadyUsedEmail
-  })
-  const alreadyUsedUsername = useSelector((state) => {
-    return state.formReducer.alreadyUsedUsername
-  })
-
-  console.log(alreadyUsedEmail)
+  const alreadyUsedEmail = useSelector((state) => state.formReducer.alreadyUsedEmail)
+  const alreadyUsedUsername = useSelector((state) => state.formReducer.alreadyUsedUsername)
 
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false)
   const dispatch = useDispatch()
@@ -37,6 +31,7 @@ const SignUp = () => {
       console.error('Ошибка при регистрации:', error)
     }
   }
+
   const handleCheckboxChange = (e) => {
     setIsCheckboxChecked(e.target.checked)
   }
@@ -45,14 +40,15 @@ const SignUp = () => {
     const password = getValues('password')
     return value === password || 'Field must match the password field'
   }
+
   return (
     <div className={classes.SignUp}>
       <div className={classes.SignUp__wrapper}>
         <span className={classes.SignUp__caption}>Create new account</span>
         <form className={classes.SignUp__form} onSubmit={handleSubmit(onSubmit)}>
           <div className={classes.SignUp__container}>
-            <label htmlFor="username">
-              <span className={classes.SignUp__label}>Username</span>
+            <label htmlFor="username" className={classes.SignUp__label}>
+              <span>Username</span>
             </label>
             <input
               className={classes.SignUp__input}
@@ -78,8 +74,8 @@ const SignUp = () => {
             <p className={classes.SignUp__errorText}>{errors?.username?.message}</p>
           </div>
           <div className={classes.SignUp__container}>
-            <label htmlFor="email">
-              <span className={classes.SignUp__label}>Email address</span>
+            <label htmlFor="email" className={classes.SignUp__label}>
+              <span>Email address</span>
             </label>
             <input
               placeholder="Email address"
@@ -101,8 +97,8 @@ const SignUp = () => {
             <p className={classes.SignUp__errorText}>{errors?.email?.message}</p>
           </div>
           <div className={classes.SignUp__container}>
-            <label htmlFor="password">
-              <span className={classes.SignUp__label}>Password</span>
+            <label htmlFor="password" className={classes.SignUp__label}>
+              <span>Password</span>
             </label>
             <input
               className={classes.SignUp__input}
@@ -122,8 +118,8 @@ const SignUp = () => {
             <p className={classes.SignUp__errorText}>{errors.password?.message}</p>
           </div>
           <div className={classes.SignUp__container}>
-            <label htmlFor="confirmPassword">
-              <span className={classes.SignUp__label}>Repeat Password</span>
+            <label htmlFor="confirmPassword" className={classes.SignUp__label}>
+              <span>Repeat Password</span>
             </label>
             <input
               className={classes.SignUp__input}
@@ -139,8 +135,9 @@ const SignUp = () => {
             <p className={classes.SignUp__errorText}>{errors.confirmPassword?.message}</p>
           </div>
           <hr style={{ width: '320px', height: '1px', backgroundColor: '#E8E8E8' }} />
+          {/* eslint-disable jsx-a11y/label-has-associated-control */}
           <div className={classes.SignUp__agreement}>
-            <label htmlFor="agreement">
+            <label htmlFor="agreeCheckbox" className={classes.SignUp__checkboxLabel}>
               <input
                 className={classes.SignUp__checkbox}
                 name="agreement"
@@ -152,6 +149,7 @@ const SignUp = () => {
             </label>
             <span className={classes.SignUp__agreementText}>I agree to the processing of my personal information</span>
           </div>
+          {/* eslint-enable jsx-a11y/label-has-associated-control */}
           <button className={classes.SignUp__button} type="submit" disabled={!isCheckboxChecked}>
             <span className={classes.SignUp__buttonText}>Create</span>
           </button>
