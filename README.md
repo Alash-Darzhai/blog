@@ -1,3 +1,3 @@
 # Blog
 
-project [Aviasales](https://aviasales-dusky-sigma.vercel.app/)
+project [Aviasales](https://blog-murex-nine.vercel.app//)
